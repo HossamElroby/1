@@ -1,10 +1,4 @@
 ## How to Run the Project
 
-1. Make sure you have **Node.js** and **npm** installed on your computer.  
-   - Download from: https://nodejs.org
-
-2. Open the project folder in **Visual Studio Code**.
-
-3. Install all dependencies:
    ```bash
    npm install
