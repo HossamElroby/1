@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Payment Received — [Property Title]</title>
+    <style>
+      body { background: #f6f9fc; margin: 0; padding: 0; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: #0f172a; }
+      .container { width: 100%; background: #f6f9fc; padding: 24px 0; }
+      .email { width: 100%; max-width: 640px; margin: 0 auto; background: #ffffff; border-radius: 12px; border: 1px solid #e5e7eb; overflow: hidden; }
+      .header { padding: 16px 20px; background: #0f172a; color: #ffffff; font-weight: 700; }
+      .content { padding: 20px; }
+      .muted { color: #64748b; }
+      .summary { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px; font-size: 14px; }
+      .cta { display: inline-block; padding: 12px 14px; background: #2563eb; color: #ffffff; border-radius: 8px; text-decoration: none; font-weight: 600; }
+      .foot { color: #64748b; font-size: 12px; padding-top: 8px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="email">
+        <div class="header">Payment Received — [Property Title] — Order #[ORDER_ID]</div>
+        <div class="content">
+          <p>Hello [Buyer Name],</p>
+          <p>Thank you — we’ve successfully received your payment for Modern 3-Bedroom Family House — [Street Name], [City].</p>
+          <div class="summary">
+            <div><strong>Order ID:</strong> [ORDER_ID]</div>
+            <div><strong>Amount paid:</strong> $[AMOUNT]</div>
+            <div><strong>Payment method:</strong> [Card / PayPal / Local Method]</div>
+          </div>
+          <h4>What’s next</h4>
+          <ul>
+            <li>An agent will contact you within 24 hours to arrange viewing/closing.</li>
+            <li>If you paid a deposit, the property is now reserved for you for [X days].</li>
+            <li>For questions, reply to this email or call [Seller Phone].</li>
+          </ul>
+          <p>Regards,<br/>[Platform Name] Support</p>
+          <p class="foot">You are receiving this email because you made a purchase on [Platform Name]. If this wasn’t you, contact support immediately.</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

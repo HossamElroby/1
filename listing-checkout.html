@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buy Modern 3-Bedroom House — Example Listing</title>
+  <meta name="description" content="Modern 3-bed family house with private garden and garage. Transparent pricing, secure checkout, and fast agent support. Reserve or buy online now." />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #121831;
+      --muted: #8b93a7;
+      --text: #f1f5ff;
+      --primary: #3b82f6;
+      --primary-700: #2563eb;
+      --success: #16a34a;
+      --danger: #ef4444;
+      --border: #1f2a4a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(59,130,246,0.12), transparent 40%),
+                  radial-gradient(1000px 600px at 110% -20%, rgba(37,99,235,0.15), transparent 50%),
+                  var(--bg);
+      color: var(--text);
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+    .hero { padding: 32px 0; }
+    .hero h1 { margin: 0 0 8px; font-size: 32px; }
+    .hero p { margin: 0; color: var(--muted); }
+
+    .grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 24px; }
+    @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
+
+    .card { background: linear-gradient(180deg, rgba(255,255,255,0.03), transparent 40%), var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+    .card .section { padding: 18px 20px; border-top: 1px solid var(--border); }
+    .card .section:first-child { border-top: none; }
+
+    .listing-header { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .price { font-size: 28px; font-weight: 700; }
+    .muted { color: var(--muted); }
+
+    .features { display: flex; flex-wrap: wrap; gap: 10px 14px; margin-top: 10px; }
+    .pill { background: rgba(255,255,255,0.06); padding: 6px 10px; border: 1px solid var(--border); border-radius: 999px; font-size: 13px; }
+
+    .cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    .btn { padding: 12px 14px; border-radius: 10px; border: 1px solid transparent; font-weight: 600; cursor: pointer; transition: transform 0.05s ease, background 0.2s ease; }
+    .btn:active { transform: translateY(1px); }
+    .btn-primary { background: var(--primary); color: white; }
+    .btn-primary:hover { background: var(--primary-700); }
+    .btn-secondary { background: transparent; color: var(--text); border-color: var(--border); }
+
+    .trust { display: flex; gap: 16px; font-size: 13px; color: var(--muted); margin-top: 8px; }
+
+    .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .gallery img { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; border: 1px solid var(--border); }
+    @media (max-width: 700px) { .gallery { grid-template-columns: repeat(2, 1fr); } }
+
+    details summary { cursor: pointer; font-weight: 600; margin-bottom: 8px; }
+
+    .label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+    .input, select { width: 100%; padding: 12px; background: #0f1530; color: var(--text); border: 1px solid var(--border); border-radius: 10px; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 700px) { .row { grid-template-columns: 1fr; } }
+
+    .inline { display: flex; align-items: center; gap: 8px; }
+    .radio { appearance: none; width: 18px; height: 18px; border: 2px solid var(--border); border-radius: 999px; position: relative; }
+    .radio:checked { border-color: var(--primary); }
+    .radio:checked::after { content: ""; position: absolute; inset: 3px; background: var(--primary); border-radius: 999px; }
+
+    .summary { background: rgba(255,255,255,0.04); border: 1px dashed var(--border); border-radius: 10px; padding: 12px; font-size: 14px; }
+
+    .notice { color: var(--muted); font-size: 12px; }
+    .success { color: #86efac; }
+    .danger { color: #fca5a5; }
+
+    .modal-backdrop { position: fixed; inset: 0; background: rgba(7,10,20,0.6); display: none; align-items: center; justify-content: center; padding: 20px; }
+    .modal { width: 100%; max-width: 560px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+
+    .footer-actions { display: flex; gap: 10px; justify-content: flex-end; }
+
+    .divider { height: 1px; background: var(--border); margin: 12px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <h1>Own your next home — modern 3-bed house in Midtown, ready to move in</h1>
+      <p class="muted">Transparent pricing. Clear steps. Secure checkout — buy or reserve this property in minutes.</p>
+    </section>
+
+    <div class="grid">
+      <article class="card">
+        <div class="section">
+          <div class="listing-header">
+            <div>
+              <div class="muted" style="font-size:14px;">Property title</div>
+              <h2 style="margin:6px 0 4px;">Modern 3-Bedroom Family House — Oak Street, Springfield</h2>
+              <div class="muted">Spacious living, private garden, 2-car garage — perfect for families.</div>
+            </div>
+            <div class="price">$245,000</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="features">
+            <span class="pill">3 bedrooms</span>
+            <span class="pill">2 bathrooms</span>
+            <span class="pill">1,850 sq ft</span>
+            <span class="pill">Private garden</span>
+            <span class="pill">2-car garage</span>
+            <span class="pill">Energy-efficient insulation</span>
+            <span class="pill">New kitchen appliances</span>
+          </div>
+          <div class="cta-row">
+            <button class="btn btn-primary" id="buyNowBtn">Buy Now</button>
+            <button class="btn btn-secondary" id="scheduleBtn">Schedule a Viewing</button>
+          </div>
+          <div class="trust"> 
+            <span>Secure payment</span>
+            <span>•</span>
+            <span>Verified listing</span>
+            <span>•</span>
+            <span>30-day buyer support</span>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="gallery" aria-label="Image gallery">
+            <figure>
+              <img src="https://images.unsplash.com/photo-1613977257593-6bab9d2ebf5f?q=80&w=1200&auto=format&fit=crop" alt="Living room — bright, open plan with hardwood floors" />
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop" alt="Kitchen — newly renovated, dishwasher included" />
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1560448075-bb4caa6c0f11?q=80&w=1200&auto=format&fit=crop" alt="Master bedroom — en-suite and walk-in closet" />
+            </figure>
+            <figure>
+              <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=1200&auto=format&fit=crop" alt="Backyard — private garden with patio and storage shed" />
+            </figure>
+          </div>
+        </div>
+
+        <div class="section">
+          <details>
+            <summary>Longer Description</summary>
+            <p>
+              This beautifully maintained family home blends classic charm with contemporary finishes. The open-plan living area receives natural light all day, while the updated kitchen features stainless steel appliances and stone countertops. The master suite includes an en-suite bathroom and walk-in closet. Located minutes from schools, parks, and shopping, it’s an ideal home for growing families or as an investment property.
+            </p>
+          </details>
+        </div>
+
+        <div class="section">
+          <div style="display:flex; gap:16px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+            <div>
+              <div class="muted" style="font-size:14px;">Listed by</div>
+              <div>[Seller Name or Agency] — Verified Seller</div>
+              <div class="muted" style="font-size:14px;">Contact: seller@example.com • +1 555-123-4567</div>
+              <div class="muted" style="font-size:14px;">Seller note: All inspections up to date; full disclosure available on request.</div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <aside class="card" id="checkoutCard" aria-live="polite">
+        <div class="section">
+          <h3 style="margin:0 0 10px;">Secure Checkout — Purchase Property</h3>
+          <div class="summary" id="orderSummary">
+            <div><strong>Property</strong>: Modern 3-Bedroom Family House — Oak Street, Springfield</div>
+            <div><strong>Price</strong>: $245,000</div>
+            <div><strong>Deposit / Reservation</strong>: $2,450 (1% to reserve)</div>
+            <div><strong>Total due today</strong>: <span id="totalDue">$2,450</span></div>
+            <div style="margin-top:8px;">
+              <label class="label" for="paymentOption">Change payment option</label>
+              <select id="paymentOption" class="input">
+                <option value="deposit">Reserve Only (1%)</option>
+                <option value="full">Full Payment</option>
+                <option value="custom">Custom Deposit</option>
+              </select>
+              <div id="customDepositWrap" style="display:none; margin-top:8px;">
+                <label class="label" for="customDeposit">Custom deposit amount (USD)</label>
+                <input type="number" id="customDeposit" class="input" min="100" step="50" placeholder="Enter amount" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h4 style="margin:0 0 10px;">Step 1 — Buyer details</h4>
+          <div class="row">
+            <div>
+              <label class="label" for="fullName">Full name — As shown on ID</label>
+              <input id="fullName" class="input" placeholder="Jane Doe" />
+            </div>
+            <div>
+              <label class="label" for="email">Email — We will send confirmation & receipt</label>
+              <input id="email" class="input" placeholder="jane@example.com" type="email" />
+            </div>
+          </div>
+          <div class="row" style="margin-top:10px;">
+            <div>
+              <label class="label" for="phone">Phone — Local number for agent to contact</label>
+              <input id="phone" class="input" placeholder="+1 555 123 4567" />
+            </div>
+            <div>
+              <label class="label" for="billing">Billing address — Required for card payments</label>
+              <input id="billing" class="input" placeholder="123 Oak Street, Springfield, IL" />
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h4 style="margin:0 0 10px;">Step 2 — Payment method</h4>
+          <div class="row">
+            <label class="inline"><input type="radio" name="pm" class="radio" value="card" checked /> Credit / Debit Card (Visa, MasterCard, Amex)</label>
+            <label class="inline"><input type="radio" name="pm" class="radio" value="paypal" /> PayPal — Fast, secure</label>
+          </div>
+          <div style="margin-top:8px;">
+            <label class="inline"><input type="radio" name="pm" class="radio" value="local" /> Local method — Fawry / Vodafone Cash / Bank Transfer</label>
+          </div>
+          <p class="notice" style="margin-top:8px;">All payments processed securely. No card details stored without consent.</p>
+        </div>
+
+        <div class="section">
+          <h4 style="margin:0 0 10px;">Step 3 — Review & confirm</h4>
+          <div class="summary" id="reviewBox">
+            <div style="display:flex; justify-content:space-between;"><span>Price</span><span>$245,000</span></div>
+            <div style="display:flex; justify-content:space-between;"><span>Deposit</span><span id="reviewDeposit">$2,450</span></div>
+            <div style="display:flex; justify-content:space-between;"><span>Service fee</span><span>$0</span></div>
+            <div class="divider"></div>
+            <div style="display:flex; justify-content:space-between; font-weight:700;"><span>Total due today</span><span id="reviewTotal">$2,450</span></div>
+          </div>
+          <div style="margin-top:10px;">
+            <label class="inline"><input type="checkbox" id="agree" /> I confirm I have read the Terms & Conditions and agree to the Purchase Agreement.</label>
+          </div>
+          <div class="footer-actions" style="margin-top:12px;">
+            <button class="btn btn-secondary" id="backBtn">Back to Listing</button>
+            <button class="btn btn-primary" id="payBtn">Proceed to Secure Payment</button>
+          </div>
+          <div class="notice" style="margin-top:8px;">Transactions are protected with 256-bit encryption.</div>
+          <div id="errors" class="danger" style="margin-top:8px; display:none;"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="successModal" role="dialog" aria-modal="true">
+    <div class="modal">
+      <div class="section">
+        <h3 style="margin:0;">Payment received — Thank you!</h3>
+        <p class="muted">We’ve received your payment for Modern 3-Bedroom Family House — Oak Street. A confirmation email and receipt have been sent to <span id="buyerEmailOut"></span>. Your order reference number is <strong id="orderId">#AB123456</strong>.</p>
+      </div>
+      <div class="section">
+        <h4 style="margin:0 0 10px;">What happens next</h4>
+        <ul style="margin:0 0 10px 18px;">
+          <li>Our agent will contact you within 24 hours to confirm details and next steps.</li>
+          <li>If you paid a deposit, we’ll hold the property for you for the agreed reservation period.</li>
+          <li>For full purchases, settlement steps and documentation will follow as per the purchase agreement.</li>
+        </ul>
+        <div class="footer-actions">
+          <a class="btn btn-secondary" href="#" id="downloadReceipt">View Receipt (PDF)</a>
+          <a class="btn btn-primary" href="mailto:seller@example.com">Contact Agent</a>
+          <button class="btn btn-secondary" id="closeModal">Back to Marketplace</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const PRICE = 245000;
+    const DEPOSIT_PERCENT = 0.01;
+
+    const paymentOption = document.getElementById('paymentOption');
+    const totalDueEl = document.getElementById('totalDue');
+    const reviewDepositEl = document.getElementById('reviewDeposit');
+    const reviewTotalEl = document.getElementById('reviewTotal');
+    const customDepositWrap = document.getElementById('customDepositWrap');
+    const customDepositInput = document.getElementById('customDeposit');
+
+    function formatUSD(value) {
+      return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(value);
+    }
+
+    function calcDue() {
+      let due = Math.round(PRICE * DEPOSIT_PERCENT);
+      if (paymentOption.value === 'full') {
+        due = PRICE;
+      } else if (paymentOption.value === 'custom') {
+        const custom = Number(customDepositInput.value || 0);
+        due = Math.max(0, Math.min(custom, PRICE));
+      }
+      totalDueEl.textContent = formatUSD(due);
+      reviewDepositEl.textContent = formatUSD(paymentOption.value === 'full' ? PRICE : due);
+      reviewTotalEl.textContent = formatUSD(due);
+    }
+
+    paymentOption.addEventListener('change', () => {
+      const isCustom = paymentOption.value === 'custom';
+      customDepositWrap.style.display = isCustom ? 'block' : 'none';
+      calcDue();
+    });
+    customDepositInput.addEventListener('input', calcDue);
+
+    calcDue();
+
+    document.getElementById('buyNowBtn').addEventListener('click', () => {
+      document.getElementById('checkoutCard').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.getElementById('scheduleBtn').addEventListener('click', () => {
+      alert('Scheduling modal placeholder — integrate with your booking system.');
+    });
+
+    const payBtn = document.getElementById('payBtn');
+    const errorsEl = document.getElementById('errors');
+
+    function validateForm() {
+      const fullName = document.getElementById('fullName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const billing = document.getElementById('billing').value.trim();
+      const agree = document.getElementById('agree').checked;
+
+      const errorMessages = [];
+      if (!fullName) errorMessages.push('Please enter your full name.');
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errorMessages.push('Please enter a valid email address.');
+      if (!phone) errorMessages.push('Please enter a phone number.');
+      if (!billing) errorMessages.push('Please enter a billing address.');
+      if (!agree) errorMessages.push('Please accept the Terms & Conditions.');
+
+      if (paymentOption.value === 'custom') {
+        const custom = Number(customDepositInput.value || 0);
+        if (!custom || custom <= 0) errorMessages.push('Please enter a custom deposit amount.');
+      }
+
+      if (errorMessages.length) {
+        errorsEl.style.display = 'block';
+        errorsEl.innerHTML = errorMessages.join('<br/>');
+        return false;
+      }
+      errorsEl.style.display = 'none';
+      errorsEl.textContent = '';
+      return true;
+    }
+
+    function fakePayment() {
+      return new Promise((resolve) => {
+        payBtn.disabled = true; payBtn.textContent = 'Processing…';
+        setTimeout(() => resolve({ ok: true, orderId: '#AB' + Math.floor(Math.random()*900000+100000) }), 1200);
+      });
+    }
+
+    payBtn.addEventListener('click', async () => {
+      if (!validateForm()) return;
+      const result = await fakePayment();
+      payBtn.disabled = false; payBtn.textContent = 'Proceed to Secure Payment';
+      if (result.ok) {
+        const email = document.getElementById('email').value.trim();
+        document.getElementById('buyerEmailOut').textContent = email;
+        document.getElementById('orderId').textContent = result.orderId;
+        document.getElementById('successModal').style.display = 'flex';
+      }
+    });
+
+    document.getElementById('closeModal').addEventListener('click', () => {
+      document.getElementById('successModal').style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    document.getElementById('backBtn').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.getElementById('downloadReceipt').addEventListener('click', (e) => {
+      e.preventDefault();
+      const orderId = document.getElementById('orderId').textContent.replace('#','');
+      const blob = new Blob([`Receipt for order ${orderId}`], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = `receipt-${orderId}.txt`; a.click();
+      URL.revokeObjectURL(url);
+    });
+  </script>
+</body>
+</html>
