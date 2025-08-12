@@ -1,0 +1,16 @@
+{
+  "name": "real-estate-platform",
+  "version": "1.0.0",
+  "description": "Modern real estate platform with property listings and secure checkout",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve .",
+    "build": "echo 'No build process needed for static HTML'"
+  },
+  "keywords": ["real-estate", "property", "listings", "html", "css", "javascript"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
